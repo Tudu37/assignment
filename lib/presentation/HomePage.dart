@@ -17,8 +17,8 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    var provider = Provider.of<providerState>(context,listen: false);
-    getController controller = Get.put(getController());
+    // var provider = Provider.of<providerState>(context,listen: false);
+    // getController controller = Get.put(getController());
 
     return Scaffold(
       appBar: AppBar(
@@ -35,7 +35,7 @@ class _HomePageState extends State<HomePage> {
              shrinkWrap: true,
                itemCount: provider.users.length,
                itemBuilder: (context,index){
-                 ListTile(
+                 return ListTile(
                    leading: Text(provider.users[index].id.toString()),
                    title:Text(provider.users[index].username) ,
                    subtitle: Text(provider.users[index].email) ,
